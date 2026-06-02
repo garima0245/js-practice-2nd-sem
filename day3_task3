@@ -1,0 +1,76 @@
+// 1. map - double all numbers
+let nums = [2, 4, 6, 8, 10];
+let doubled = nums.map(num => num * 2);
+console.log("Doubled:", doubled);
+
+// 2. filter - get even numbers
+let numbers = [3, 6, 9, 12, 15, 18];
+let evens = numbers.filter(num => num % 2 === 0);
+console.log("Even Numbers:", evens);
+
+// 3. reduce - calculate sum
+let marks = [15, 25, 35, 45];
+let total = marks.reduce((sum, mark) => sum + mark, 0);
+console.log("Total Sum:", total);
+
+// 4. find - first person with age > 18
+let people = [
+  { name: "Anusha", age: 16 },
+  { name: "Divya", age: 22 },
+  { name: "Garima", age: 20 }
+];
+let adult = people.find(person => person.age > 18);
+console.log("First Adult:", adult);
+
+// 5. forEach - log fruits with index
+let fruits = ["Mango", "Grapes", "Papaya"];
+fruits.forEach((fruit, index) => {
+  console.log(index, fruit);
+});
+
+// 6. map - extract names
+let students = [
+  { name: "saurab", age: 18 },
+  { name: "aakash", age: 19 },
+  { name: "aadarsh", age: 20 }
+];
+let names = students.map(student => student.name);
+console.log("Names:", names);
+
+// 7. filter - products with price < 100
+let products = [
+  { name: "Pen", price: 20 },
+  { name: "Bag", price: 150 },
+  { name: "Book", price: 80 }
+];
+let cheapProducts = products.filter(product => product.price < 100);
+console.log("Cheap Products:", cheapProducts);
+
+// 8. reduce - find maximum value
+let values = [12, 45, 8, 67, 30];
+let maxValue = values.reduce((max, num) => (num > max ? num : max));
+console.log("Maximum Value:", maxValue);
+
+// 9. map + filter - adult names in uppercase
+let users = [
+  { name: "sukirti", age: 17 },
+  { name: "Suprana", age: 20 },
+  { name: "Aakirti", age: 19 }
+];
+let adultNames = users
+  .filter(user => user.age >= 18)
+  .map(user => user.name.toUpperCase());
+
+console.log("Adult Names:", adultNames);
+
+// 10. forEach - build HTML unordered list
+let items = ["Tea", "Coffee", "Juice"];
+let html = "<ul>";
+
+items.forEach(item => {
+  html += `<li>${item}</li>`;
+});
+
+html += "</ul>";
+
+console.log(html);
